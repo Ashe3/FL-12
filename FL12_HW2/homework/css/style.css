@@ -1,79 +1,79 @@
 @media print {
-  .tm-main-nav,
-  .tm-team-img,
-  #about,
-  .blocks div.tm-content-box,
-  section#ideas + section.tm-content-box,
-  .heading li:first-child::after,
-  .heading li:nth-child(3)::after,
-  .heading li:hover::before,
-  section::before,
-  .carousel-indicators,
-  .gallery-container {
-    display: none;
-  }
+    .tm-main-nav,
+    .tm-team-img,
+    #about,
+    .blocks div.tm-content-box,
+    section#ideas + section.tm-content-box,
+    .heading li:first-child::after,
+    .heading li:nth-child(3)::after,
+    .heading li:hover::before,
+    section::before,
+    .carousel-indicators,
+    .gallery-container {
+      display: none;
+    }
 
-  section.heading ol {
-    list-style-type: none;
-  }
+    section.heading ol {
+      list-style-type: none;
+    }
 
-  .tm-banner-text {
-    text-align: center;
-  }
-  
-	#home{
-		margin-top: -120px;
-		padding-top: 0px;
-	}
+    .tm-banner-text {
+      text-align: center;
+    }
+    
+    #home{
+      margin-top: -120px;
+      padding-top: 0px;
+    }
 
-	section.heading{
-		display: block;
-		margin-top: -60px;
-		width: 60%;
-		margin-left: 20%;
-  }
-  
-	.blocks .tm-team-description-container{
-		min-width: 90%;
-		text-align: center;
-    padding: 0;
-    margin-bottom: 100px;
-    margin-top: -80px;
-	}
-	
-	.blocks .tm-team-description-container h2{
-		margin-left: 10%;
-	}
-	
-  section.heading ol li:nth-of-type(2n+1){
-		text-align: right;
-    margin-bottom: 20px;
-    margin-right: 20px;
-	}
-	
-	section.heading ol li:nth-child(2n){
-		float: left;
-		margin-top: -20px;
-  }
+    section.heading{
+      display: block;
+      margin-top: -60px;
+      width: 60%;
+      margin-left: 20%;
+    }
+    
+    .blocks .tm-team-description-container{
+      min-width: 90%;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 100px;
+      margin-top: -80px;
+    }
+    
+    .blocks .tm-team-description-container h2{
+      margin-left: 10%;
+    }
+    
+    section.heading ol li:nth-of-type(2n+1){
+      text-align: right;
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+    
+    section.heading ol li:nth-child(2n){
+      float: left;
+      margin-top: -20px;
+    }
 
-	section:nth-child(2) .tm-team-description-container {
-    text-align: center;
-    padding: 0;
-		min-width: 100%;
-	}
-	
-	#ideas{
-		margin-top: -80px;
-	}
-	
-	.carousel {
-    padding: 0;
-		margin-bottom: 0;
-  }
+    section:nth-child(2) .tm-team-description-container {
+      text-align: center;
+      padding: 0;
+      min-width: 100%;
+    }
+    
+    #ideas{
+      margin-top: -80px;
+    }
+    
+    .carousel {
+      padding: 0;
+      margin-bottom: 0;
+    }
 
-  .tm-section-title {
-    text-transform: uppercase;
-  }
+    .tm-section-title {
+      text-transform: uppercase;
+    }
 }
 
 a.tm-nav-item-link:hover {

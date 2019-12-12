@@ -1,1 +1,110 @@
-// Write your styles here
+@mixin button ($btnColor, $width, $height) {
+  background-color: $btnColor;
+  width: $width;
+  height: $height; 
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: $contentBackground;
+}
+
+.header {
+  background: $bkgImage no-repeat;
+  background-size: 100%;
+  background-position: 0%;
+  height: 720px;
+  color: $headerTxtClr;
+
+  .header-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 200px;
+
+    .landing-logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      margin-bottom: 80px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      p {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        font-size: 17px;
+
+        span {
+          font-size: 10px;
+          margin-top: 3px;
+          font-weight: 400;
+        }
+      }
+    }
+    p.header_heading {
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 75px;
+      position: relative;
+      z-index: 0;
+
+      &::after {
+        position: absolute;
+        content: '';
+        background: $txtBgClr;
+        z-index: -1;
+        top: 85px;
+        left: 1px;
+        height: 35px;
+        width: 205px;
+
+      }
+    }
+
+    p.header_text {
+      width: 660px;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 15px;
+      white-space: pre-line;
+      margin-bottom: 45px;
+    }
+
+    div:last-child {
+      width: 430px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; 
+
+      button.header_button {
+        @include button($btnColor, 140px, 40px);
+      }
+
+      
+    }
+  }
+}
+
+main {
+  margin: 0 auto;
+  width: 960px;
+}

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #fff; }
+
+.header {
+  background: url("../img/m-h-day.jpg") no-repeat;
+  background-size: 100%;
+  background-position: 0%;
+  height: 720px;
+  color: #2c2f3c; }
+  .header .header-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 200px; }
+    .header .header-wrap .landing-logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      margin-bottom: 80px; }
+      .header .header-wrap .landing-logo img {
+        width: 40px;
+        height: 40px; }
+      .header .header-wrap .landing-logo p {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        font-size: 17px; }
+        .header .header-wrap .landing-logo p span {
+          font-size: 10px;
+          margin-top: 3px;
+          font-weight: 400; }
+    .header .header-wrap p.header_heading {
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 75px;
+      position: relative;
+      z-index: 0; }
+      .header .header-wrap p.header_heading::after {
+        position: absolute;
+        content: '';
+        background: #14a0c7;
+        z-index: -1;
+        top: 85px;
+        left: 1px;
+        height: 35px;
+        width: 205px; }
+    .header .header-wrap p.header_text {
+      width: 660px;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 15px;
+      white-space: pre-line;
+      margin-bottom: 45px; }
+    .header .header-wrap div:last-child {
+      width: 430px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .header .header-wrap div:last-child button.header_button {
+        background-color: #699900;
+        width: 140px;
+        height: 40px;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        font-weight: bold; }
+
+main {
+  margin: 0 auto;
+  width: 960px; }

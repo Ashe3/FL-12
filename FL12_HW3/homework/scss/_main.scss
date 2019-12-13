@@ -118,6 +118,13 @@ main {
   width: 960px;
   font-family: 'Hind', sans-serif;
 
+  .section_card_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   p.section_text {
     position: relative;
     font-size: 30px;
@@ -125,6 +132,7 @@ main {
     padding: 50px;
     height: 130px;
     text-align: center;
+    color: $headerTxtClr;
 
     &::after {
       position: absolute;
@@ -155,11 +163,17 @@ main {
     align-items: center;
     width: 450px;
     margin-left: 150px;
+    color: #c0c3ce;
+
+    p.section_card_text {
+      font-weight: 100;
+    }
 
     .section_card_heading {
       font-weight: bold;
       font-size: 20px;
       padding-bottom: 25px;
+      color: $contentBackground;
     }
 
     a {
@@ -173,4 +187,88 @@ main {
     width: 30%;
   }
 
+}
+
+div.section_banner {
+  width: 1200px;
+  height: 145px;
+  position: relative;
+  top: 70px;
+  z-index: 1;
+  right: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, #65950e, #2f5dce);
+  border-radius: 7px;
+  color: #c0c3ce;
+  
+  .section_banner_heading {
+    color: $headerTxtClr;
+    font-size: 27px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    z-index: 10;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 57px;
+      height: 40px;
+      left: 285px;
+      top: 20px;
+      z-index: -1;
+      background-color: $txtBgClr;
+    }
+  }
+
+  button {
+    @include button($btnColor, 140px, 40px);
+  }
+}
+
+footer {
+  height: 245px;
+  background-color: $cardBgColor;
+  color: #c0c3ce;
+  font-family: 'Hind', sans-serif;
+
+  .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 120px;
+    align-items: center;
+
+    .footer_text {
+      width: 295px;
+      font-size: 14px;
+    }
+
+    .footer_logo {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+      }
+
+      p {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-weight: bold;
+        font-size: 23px;
+
+        span {
+          font-size: 10px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

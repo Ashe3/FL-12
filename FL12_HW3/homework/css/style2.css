@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background: #660; }
+  background: #21232e; }
 
 .header {
   background: url("../img/m-h-night.jpg") no-repeat;
@@ -49,7 +49,7 @@ body {
       .header .header-wrap p.header_heading::after {
         position: absolute;
         content: '';
-        background: #fff;
+        background: #ff4e33;
         z-index: -1;
         top: 85px;
         left: 1px;
@@ -69,7 +69,7 @@ body {
       justify-content: space-between;
       align-items: center; }
       .header .header-wrap div:last-child button.header_button {
-        background-color: #699900;
+        background-color: #e3ac00;
         width: 140px;
         height: 40px;
         border-radius: 3px;
@@ -84,17 +84,23 @@ main {
   margin: 0 auto;
   width: 960px;
   font-family: 'Hind', sans-serif; }
+  main .section_card_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
   main p.section_text {
     position: relative;
     font-size: 30px;
     font-weight: 400;
     padding: 50px;
     height: 130px;
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
     main p.section_text::after {
       position: absolute;
       content: '';
-      background-color: #fff;
+      background-color: #ff4e33;
       z-index: -1;
       width: 135px;
       height: 33px;
@@ -106,7 +112,7 @@ main {
   border-radius: 5px;
   padding: 20px;
   min-width: 1120px;
-  background-color: #21232e;
+  background-color: #3b3f50;
   margin-bottom: 15px;
   color: #fff; }
   .section_card .section_card_right_container {
@@ -115,11 +121,15 @@ main {
     justify-content: center;
     align-items: center;
     width: 450px;
-    margin-left: 150px; }
+    margin-left: 150px;
+    color: #c0c3ce; }
+    .section_card .section_card_right_container p.section_card_text {
+      font-weight: 100; }
     .section_card .section_card_right_container .section_card_heading {
       font-weight: bold;
       font-size: 20px;
-      padding-bottom: 25px; }
+      padding-bottom: 25px;
+      color: #21232e; }
     .section_card .section_card_right_container a {
       padding-top: 25px;
       color: white;
@@ -127,3 +137,73 @@ main {
   .section_card img {
     border-radius: 5px;
     width: 30%; }
+
+div.section_banner {
+  width: 1200px;
+  height: 145px;
+  position: relative;
+  top: 70px;
+  z-index: 1;
+  right: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, #65950e, #2f5dce);
+  border-radius: 7px;
+  color: #c0c3ce; }
+  div.section_banner .section_banner_heading {
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    z-index: 10; }
+    div.section_banner .section_banner_heading::after {
+      content: '';
+      position: absolute;
+      width: 57px;
+      height: 40px;
+      left: 285px;
+      top: 20px;
+      z-index: -1;
+      background-color: #ff4e33; }
+  div.section_banner button {
+    background-color: #e3ac00;
+    width: 140px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-weight: bold; }
+
+footer {
+  height: 245px;
+  background-color: #3b3f50;
+  color: #c0c3ce;
+  font-family: 'Hind', sans-serif; }
+  footer .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 120px;
+    align-items: center; }
+    footer .footer-wrap .footer_text {
+      width: 295px;
+      font-size: 14px; }
+    footer .footer-wrap .footer_logo {
+      display: flex;
+      flex-direction: row; }
+      footer .footer-wrap .footer_logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px; }
+      footer .footer-wrap .footer_logo p {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-weight: bold;
+        font-size: 23px; }
+        footer .footer-wrap .footer_logo p span {
+          font-size: 10px;
+          font-weight: 400;
+          text-align: center; }

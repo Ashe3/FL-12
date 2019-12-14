@@ -5,12 +5,13 @@
   border-radius: 3px;
   border: none;
   color: white;
-  font-weight: bold;
+  font-weight: map-get($font-weights, "bold");
 }
 
 @mixin link {
   color: white;
-  font-weight: bold;
+  font-weight: map-get($font-weights, "bold");
+  font-family: 'Hind', sans-serif;
 }
 
 * {
@@ -19,7 +20,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $textFonts;
   background: $contentBackground;
 }
 
@@ -46,20 +47,23 @@ body {
       img {
         width: 40px;
         height: 40px;
+        margin-right: 10px;
       }
 
       p {
-        margin-left: 20px;
         display: flex;
         flex-direction: column;
         text-align: center;
-        font-weight: bold;
-        font-size: 17px;
+        font-weight: 600;
+        font-size: 20px;
+        color: $headerTxtClr;
+        line-height: 15px;
+        padding-top: 5px;
 
         span {
-          font-size: 10px;
-          margin-top: 3px;
-          font-weight: 400;
+          font-size: 8px;
+          font-weight: map-get($font-weights, "regular");
+          margin-top: 5px;
         }
       }
     }
@@ -69,9 +73,10 @@ body {
       width: 450px;
       font-size: 50px;
       font-weight: 600;
-      margin-bottom: 75px;
+      margin-bottom: 25px;
       position: relative;
       z-index: 0;
+      font-family: 'Source Sans Pro', sans-serif;
 
       &::after {
         position: absolute;
@@ -88,11 +93,12 @@ body {
 
     p.header_text {
       width: 660px;
-      font-weight: 100;
+      font-weight: 300;
       line-height: 25px;
       font-size: 15px;
       white-space: pre-line;
       margin-bottom: 45px;
+      font-family: $textFonts;
     }
 
     div:last-child {
@@ -128,7 +134,7 @@ main {
   p.section_text {
     position: relative;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: map-get($font-weights, "regular");
     padding: 50px;
     height: 130px;
     text-align: center;
@@ -157,23 +163,23 @@ main {
   color: #fff;
 
   .section_card_right_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
+    @extend .section_card_wrap;
+    width: 460px;
     margin-left: 150px;
     color: #c0c3ce;
+    line-height: 25px;
 
     p.section_card_text {
       font-weight: 100;
+      font-family: $textFonts;
+      word-wrap: break-word;
     }
 
     .section_card_heading {
-      font-weight: bold;
+      font-weight: map-get($font-weights, "bold");
       font-size: 20px;
       padding-bottom: 25px;
-      color: $contentBackground;
+      color: #fff;
     }
 
     a {
@@ -200,14 +206,14 @@ div.section_banner {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(to right, #65950e, #2f5dce);
+  background: linear-gradient(to right, $gradStart, $gradEnd);
   border-radius: 7px;
   color: #c0c3ce;
   
   .section_banner_heading {
     color: $headerTxtClr;
     font-size: 27px;
-    font-weight: bold;
+    font-weight: map-get($font-weights, "bold");
     padding-bottom: 15px;
     z-index: 10;
 
@@ -232,7 +238,7 @@ footer {
   height: 245px;
   background-color: $cardBgColor;
   color: #c0c3ce;
-  font-family: 'Hind', sans-serif;
+  font-family: $textFonts;
 
   .footer-wrap {
     display: flex;
@@ -242,8 +248,10 @@ footer {
     align-items: center;
 
     .footer_text {
+      font-family: $textFonts;
       width: 295px;
       font-size: 14px;
+      line-height: 20px;
     }
 
     .footer_logo {
@@ -259,16 +267,19 @@ footer {
       p {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        font-weight: bold;
+        font-weight: map-get($font-weights, "bold");
         font-size: 23px;
+        text-align: center;
+        line-height: 15px;
+        padding-top: 5px;
 
         span {
           font-size: 10px;
           font-weight: 400;
-          text-align: center;
+          margin-top: 5px;
         }
       }
+
     }
   }
 }

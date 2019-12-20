@@ -14,19 +14,19 @@ body {
   font-family: roboto;
 }
 .post-1 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
 .post-2 {
-	background: #9bb800;
+  background: #9bb800;
 }
 .post-3 {
-	background: #ed5120;
+  background: #ed5120;
 }
 .post-4 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
 .post-5 {
-	background: #2d95bb;
+  background: #2d95bb;
 }
 
 * {
@@ -39,6 +39,128 @@ a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+  .header {
+    height: 30vh;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .header .nav-panel {
+    display: none;
+  }
+  /* //add sandwich btn */
+
+  .h-content h1 {
+    font-size: 2.7em;
+  }
+
+  .h-content p {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 20px;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .exposition, .picture {
+    height: 300px;
+    max-height: 375px;
+  }
+
+  .side-content {
+    width: 100%;
+  }
+
+  .wp-post .text-formats {
+    height: 300px;
+    max-height: 375px;
+    padding: 10px 10px 10px 40px;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    height: 75px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+  }
+
+  .nav-panel a {
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 20px;
+  }
+
+  div.bev {
+    display: flex;
+    align-items: center;
+    height: 75px;
+  }
+  
+  div.bev:hover {
+    background-color: #1f52a4;
+  }
+
+  .h-content h1, .h-content p {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+ 
+  .h-content h1 {
+    font-size: 3.5em;
+  }
+
+  .h-content p {
+    font-size: 1.1em;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .post:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  
+  .post:nth-child(even) .exposition {
+    padding: 10px 40px 10px 85px;
+    text-align: right;
+  }
+
+  .exposition, .picture {
+    width: 50%;
+    max-height: 375px;
+  }
+
+  .side-content {
+    width: 45vw;
+  }
+   
+  .wp-post .text-formats {
+    padding-left: 85px;
+    width: 75%;
+    line-height: 25px;
+  }
+}
+
 body {
   max-width: 1400px;
   margin: 0 auto;
@@ -46,13 +168,10 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: 75px;
-  background-color: #024161;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  background-color: #024161;
   margin-bottom: 20px;
 }
 
@@ -67,30 +186,6 @@ body {
   color: #a93762;
 }
 
-.nav-panel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 50px;
-}
-
-.nav-panel a {
-  display: block;
-  color: #fff;
-  font-weight: 500;
-  margin: 0 20px;
-}
-
-div.bev {
-  display: flex;
-  align-items: center;
-  height: 75px;
-}
-
-div.bev:hover {
-  background-color: #1f52a4;
-}
 .h-content {
   color: #fff;
   width: 100%;
@@ -106,17 +201,7 @@ div.bev:hover {
 }
 
 .h-content h1, .h-content p {
-  max-width: 70%;
   font-weight: 200;
-  margin-top: 20px;
-}
-
-.h-content h1 {
-  font-size: 3.5em;
-}
-
-.h-content p {
-  font-size: 1.1em;
 }
 
 .main-content {
@@ -131,18 +216,9 @@ div.bev:hover {
   margin-right: 20px;
 }
 
-.post:nth-child(odd) {
-  flex-direction: row-reverse;
-}
-
-.post {
+.side-content {
   display: flex;
-  flex-direction: row;
-}
-
-.exposition, .picture {
-  width: 50%;
-  max-height: 375px;
+  flex-direction: column;
 }
 
 .post img:hover {
@@ -172,11 +248,6 @@ div.bev:hover {
   justify-content: space-around;
 }
 
-.post:nth-child(even) .exposition {
-  padding: 10px 40px 10px 85px;
-  text-align: right;
-}
-
 .picture img {
   width: 100%;
   height: 100%;
@@ -188,12 +259,6 @@ div.bev:hover {
   flex-direction: column;
   justify-content: center;
   min-height: 200px;
-}
-
-.wp-post .text-formats {
-  padding-left: 85px;
-  width: 70%;
-  line-height: 25px;
 }
 
 .wp-post .text-formats h2 {
@@ -218,14 +283,10 @@ div.bev:hover {
   line-height: 25px;
 }
 
-.side-content {
-  display: flex;
-  flex-direction: column;
-  width: 43vw;
-}
 
 .side-content .picture {
   width: 100%;
+  height: auto;
 }
 
 .s-post {

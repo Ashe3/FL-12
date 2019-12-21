@@ -1,15 +1,3 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-}
-
 body {
   font-family: roboto;
 }
@@ -37,31 +25,179 @@ body {
 
 a {
   text-decoration: none;
+  color: #fff;
+  font-weight: 500;
 }
 
-@media only screen and (max-width: 1440px) and (min-width: 768px) {
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #0b192f;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+}
+
+.header {
+  background-color: #024161;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.logo {
+  font-size: 40px;
+}
+
+.logo .pink {
+  color: rgb(192, 67, 109);
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.h-content {
+  height: 35vh;
+  max-height: 400px;
+  background: url('../img/post0.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+}
+
+.h-content h1, h2 {
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 45px;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: row;
+}
+
+.exposition{
+  min-height: 270px;
+}
+
+.wp-post .text-formats {
+  margin: 30px;
+}
+
+.text-formats {
+  line-height: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-formats p {
+  margin: 30px 0;
+
+}
+
+.text-formats div.ss {
+  padding: 40px 0 50px 40px ;
+}
+
+.post:hover img, .post:hover h2 {
+  opacity: 0.5;
+}
+
+.picture img, .s-picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.date {
+  position: relative;
+  font-size: 30px;
+  opacity: 0.3;
+  padding: 30px 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.date span {
+  font-size: 65px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.s-exp {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.s-exp {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  padding: 20px 40px;
+}
+
+.s-post {
+  background-color: #fff;
+  color: #000;
+}
+
+.s-post h3 {
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+
+.footer {
+  background-color: #024161;
+}
+
+.footer span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.wp-post .text-formats {
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
   body {
     padding: 0 10px;
   }
+
   .header {
-    height: 30vh;
+    height: 20vh;
+    min-height: 100px;
+    max-height: 300px;
     flex-direction: column-reverse;
     justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
   }
 
-  .header .nav-panel {
+  .menu {
+    display: block;
+  }
+
+  .nav-panel {
     display: none;
-  }
-  /* //add sandwich btn */
-
-  .h-content h1 {
-    font-size: 2.7em;
-  }
-
-  .h-content p {
-    margin-top: 20px;
-    font-size: 1em;
-    line-height: 20px;
   }
 
   .post {
@@ -69,28 +205,50 @@ a {
     flex-direction: column-reverse;
   }
 
-  .exposition, .picture {
-    height: 300px;
-    max-height: 375px;
+  .footer {
+    text-align: center;
+    padding: 20px;
   }
 
-  .side-content {
-    width: 100%;
+  .wp-post {
+    height: 400px;
   }
 
   .wp-post .text-formats {
-    height: 300px;
-    max-height: 375px;
-    padding: 10px 10px 10px 40px;
+    flex-direction: column;
   }
 
+  .wp-post .text-formats div.ss {
+    padding: 20px;
+  }
+  
+  .wp-post .text-formats .date {
+    padding: 0;
+  }
 }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .center-content {
+    margin-right: 20px;
+    min-width: 65%;
+  }
+
+  .footer span {
+    display: block;
+  }
+
+  .exposition {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 769px) {
   .header {
-    height: 75px;
+    height: 80px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
   }
 
   .nav-panel {
@@ -98,14 +256,10 @@ a {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-right: 50px;
   }
 
-  .nav-panel a {
-    display: block;
-    color: #fff;
-    font-weight: 500;
-    margin: 0 20px;
+  .h-content p {
+    width: 60%;
   }
 
   div.bev {
@@ -113,196 +267,52 @@ a {
     align-items: center;
     height: 75px;
   }
+
+  .bev a {
+    margin: 25px;
+  }
   
   div.bev:hover {
     background-color: #1f52a4;
   }
 
-  .h-content h1, .h-content p {
-    max-width: 70%;
-    margin-top: 20px;
-  }
- 
-  .h-content h1 {
-    font-size: 3.5em;
-  }
-
-  .h-content p {
-    font-size: 1.1em;
+  .exposition, .picture {
+    width: 50%;
+    max-height: 300px;
   }
 
   .post {
     display: flex;
     flex-direction: row;
+   }
+
+  .side-content {
+    width: 45vw;
+    margin-left: 20px;
+  }
+
+  .s-post {
+    margin-bottom: 20px;
   }
 
   .post:nth-child(odd) {
     flex-direction: row-reverse;
   }
-  
-  .post:nth-child(even) .exposition {
-    padding: 10px 40px 10px 85px;
+
+  .post:nth-child(even) .text-formats { 
+    flex-direction: row-reverse;
     text-align: right;
+    padding-right: 40px;
   }
-
-  .exposition, .picture {
-    width: 50%;
-    max-height: 375px;
+    
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 50px;
   }
-
-  .side-content {
-    width: 45vw;
+  
+  .footer span {
+    display: block;
   }
-   
-  .wp-post .text-formats {
-    padding-left: 85px;
-    width: 75%;
-    line-height: 25px;
-  }
-}
-
-body {
-  max-width: 1400px;
-  margin: 0 auto;
-  background-color: #0b192f;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background-color: #024161;
-  margin-bottom: 20px;
-}
-
-.logo {
-  font-size: 28px;
-  color: #fff;
-  font-weight: 200;
-  margin-left: 30px;
-}
-
-.logo .pink {
-  color: #a93762;
-}
-
-.h-content {
-  color: #fff;
-  width: 100%;
-  height: 45vh;
-  background: url('../img/post0.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 40px;
-  margin-bottom: 20px;
-}
-
-.h-content h1, .h-content p {
-  font-weight: 200;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  font-weight: 200;
-  margin-bottom: 20px;
-}
-
-.center-content {
-  margin-right: 20px;
-}
-
-.side-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.post img:hover {
-  background-color: #9d27b0;
-  opacity: 0.5;
-}
-
-.text-formats:hover h2 {
-  opacity: 0.6;
-}
-
-.text-formats p {
-  font-weight: 300;
-  font-size: 15px;  
-  line-height: 25px;
-}
-
-.text-formats h2 {
-  font-size: 50px;
-  font-weight: 100;
-}
-
-.exposition {
-  padding: 10px 85px 10px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.picture img {
-  width: 100%;
-  height: 100%;
-}
-
-.wp-post {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 200px;
-}
-
-.wp-post .text-formats h2 {
-  padding-bottom: 5%;
-}
-
-.footer {
-  width: 100%;
-  height: 85px;
-  background-color: #024161;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 35px;
-  color: #fff;
-  font-size: 12px;
-}
-
-.cp span {
-  display: block;
-  line-height: 25px;
-}
-
-
-.side-content .picture {
-  width: 100%;
-  height: auto;
-}
-
-.s-post {
-  margin-bottom: 20px;
-  background-color: #fff;
-  color: #000;
-  font-weight: 100;
-  min-height: 50vh;
-}
-
-.s-post .text-formats {
-  padding: 25px;
-}
-
-.s-post .text-formats h3{
-  font-weight: 100;
-  font-size: 30px;
-  margin-bottom: 15px;
 }

@@ -76,3 +76,24 @@ const substitute = (list) => mapArray(list, e => e < 30 ? '*': e);
 
 console.log(substitute([58, 14, 48, 2, 31, 29]))
 
+const dateVar = new Date(2019, 0, 2);
+
+const getPastDay = (date, days) => {
+  const dayMs = 86400000;
+  const newDate = new Date(date - dayMs * days);
+  return newDate.getDate();
+}
+
+console.log(getPastDay(dateVar, 14));
+
+const formatDate = (date) => {
+  const getTimeValue = (time) => time < 10 ? `0${time}` : time;
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = getTimeValue(date.getHours());
+  const minutes = getTimeValue(date.getMinutes());
+  return `${year}/${month}/${day} ${hours}:${minutes}`
+}
+
+console.log(formatDate(new Date()));

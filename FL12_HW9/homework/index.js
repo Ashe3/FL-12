@@ -9,7 +9,7 @@ const convert = (...args) => {
   return args
 }
 
-console.log(convert('1', 2, 3, '4'));
+convert('1', 2, 3, '4');
 
 const executeforEarch = (list, iterFunc) => {
   for (const arg of list) {
@@ -25,7 +25,7 @@ const mapArray = (list, iterFunc) => {
   return res;
 }
 
-console.log(mapArray([2, '5', 8], (e) => e + 3));
+mapArray([2, '5', 8], (e) => e + 3);
 
 const filterArray = (list, iterFunc) => {
   const res = [];
@@ -37,7 +37,7 @@ const filterArray = (list, iterFunc) => {
   return res;
 }
 
-console.log(filterArray([2, 5, 8], e => e % 2 === 0));
+filterArray([2, 5, 8], e => e % 2 === 0);
 
 const flipOver = (str) => {
   let res = '';
@@ -47,7 +47,7 @@ const flipOver = (str) => {
   return res;
 }
 
-console.log(flipOver('Hello world'));
+flipOver('hey world');
 
 const makeListFromRange = (range) => {
   const res = [];
@@ -57,7 +57,7 @@ const makeListFromRange = (range) => {
   return res;
 }
 
-console.log(makeListFromRange([2, 7]));
+makeListFromRange([2, 7]);
 
 const actors = [
   { name: 'tommy', age: 36 },
@@ -70,11 +70,11 @@ const getArrayOfKeys = (obj, key) => {
   return res;
 }
 
-console.log(getArrayOfKeys(actors, 'name'));
+getArrayOfKeys(actors, 'name');
 
 const substitute = (list) => mapArray(list, e => e < 30 ? '*': e);
 
-console.log(substitute([58, 14, 48, 2, 31, 29]))
+substitute([58, 14, 48, 2, 31, 29]);
 
 const dateVar = new Date(2019, 0, 2);
 
@@ -84,7 +84,7 @@ const getPastDay = (date, days) => {
   return newDate.getDate();
 }
 
-console.log(getPastDay(dateVar, 14));
+getPastDay(dateVar, 14);
 
 const formatDate = (date) => {
   const getTimeValue = (time) => time < 10 ? `0${time}` : time;
@@ -96,4 +96,5 @@ const formatDate = (date) => {
   return `${year}/${month}/${day} ${hours}:${minutes}`
 }
 
-console.log(formatDate(new Date()));
+formatDate(new Date());
+
